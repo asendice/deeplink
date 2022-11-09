@@ -15,6 +15,8 @@
   </style>
   <div class="main">
 
+    <div id="forgotUsernameContainer"></div>
+
     <a href="https://asendice.github.io/app">asendice.github.io/app</a>
 
     <br />
@@ -33,4 +35,16 @@
   </div>
   <!-- <a href="intent:#Intent;scheme=hutt://app/map;package=com.hutt.app;end">Open Map</a> -->
 </body>
+<script type="text/javascript">
+  document.body.onload = addElement;
+  
+  function addElement() {
+    const newAtag = document.createElement("a");
+    newAtag.setAttribute('href', 'msauth://com.adapthealth.myapp.dev%2FB0QjdTWtmGEeZ0vdKmNSqxCotIk%253D?error=access_denied&error-description=%27forgotten%20their%20username%27');  
+    const aTagText = document.createTextNode("Forgot your username?");
+    newAtag.appendChild(aTagText);
+    const currentDiv = document.getElementById("forgotUsernameContainer");
+    currentDiv.append(newAtag)
+  }
+  </script>
 </html>
